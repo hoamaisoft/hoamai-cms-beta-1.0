@@ -1,0 +1,1 @@
+<p class="alert">Tính năng tải giao diện từ store đang xây dựng, bạn có thể cài giao diện bằng cách tải giao diện lên thư mục hm_themes</p>

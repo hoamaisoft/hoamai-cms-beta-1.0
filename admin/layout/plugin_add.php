@@ -1,0 +1,1 @@
+<p class="alert">Tính năng tải plugin từ store đang xây dựng, bạn có thể cài plugin bằng cách tải plugin lên thư mục hm_plugins</p>
