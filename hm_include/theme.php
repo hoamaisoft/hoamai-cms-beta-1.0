@@ -59,7 +59,7 @@ function css($file=NULL){
 		
 		$theme = activated_theme();
 		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<link rel="stylesheet" type="text/css" href="'.SITE_URL.'/'.HM_THEME_DIR.'/'.$theme.'/'.$file.'">'."\n";
+			return '<link rel="stylesheet" type="text/css" href="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'">'."\n";
 		}else{
 			return FALSE;
 		}
@@ -78,7 +78,7 @@ function js($file=NULL){
 		
 		$theme = activated_theme();
 		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<script type="text/javascript" src="'.SITE_URL.'/'.HM_THEME_DIR.'/'.$theme.'/'.$file.'"></script>'."\n";
+			return '<script type="text/javascript" src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'"></script>'."\n";
 		}else{
 			return FALSE;
 		}
@@ -99,7 +99,7 @@ function img($file=NULL){
 		
 		$theme = activated_theme();
 		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<img src="'.SITE_URL.'/'.HM_THEME_DIR.'/'.$theme.'/'.$file.'" />'."\n";
+			return '<img src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'" />'."\n";
 		}else{
 			return FALSE;
 		}
@@ -115,7 +115,7 @@ function img($file=NULL){
 function theme_uri(){
 	
 	$theme = activated_theme();
-	return SITE_URL.'/'.HM_THEME_DIR.'/'.$theme;
+	return SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme;
 	
 }
 
