@@ -41,9 +41,12 @@ define('HM_MODULE_DIR', 'hm_module');
 /** Thư mục quản trị */
 define('HM_ADMINCP_DIR', 'admin');
 
+/** Cổng kết nối (:80, :8080, :443 etc)*/
+define('SERVER_PORT', '');
+
 /** Địa chỉ website */
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
-define('SITE_URL', $protocol.$_SERVER['SERVER_NAME']);
+define('SITE_URL', $protocol.$_SERVER['SERVER_NAME'].SERVER_PORT);
 
 /** Đường dẫn thư mục */
 define('FOLDER_PATH', '');
