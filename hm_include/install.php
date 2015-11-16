@@ -1,7 +1,11 @@
 <?php
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-define('SITE_URL', $protocol.$_SERVER['SERVER_NAME'].$url_path);
+if($_SERVER['SERVER_PORT']!='80'){
+	define('SITE_URL', $protocol.$_SERVER['SERVER_NAME'].$url_path);
+}else{
+	define('SITE_URL', $protocol.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$url_path);
+}
 require_once(BASEPATH . '/hm_include/install/install_model.php');
 $step=$_GET['step'];
 switch ($step) {
