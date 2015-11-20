@@ -14,7 +14,7 @@ require_once( dirname( __FILE__ ) . '/content/content_model.php' );
 require_once( dirname( __FILE__ ) . '/revision/revision_model.php' );
 require_once( dirname( __FILE__ ) . '/taxonomy/taxonomy_model.php' );
 
-if( $_SERVER['HTTP_HOST'] != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
+if(  parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST) != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
 	hm_exit('403 - Truy cập bị từ chối');
 }
 

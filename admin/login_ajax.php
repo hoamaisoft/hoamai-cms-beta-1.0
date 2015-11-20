@@ -12,7 +12,7 @@ require_once( dirname( __FILE__ ) . '/admin.php' );
 /** gọi model xử lý login */
 require_once( dirname( __FILE__ ) . '/login/login_model.php' );
 
-if( $_SERVER['HTTP_HOST'] != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
+if(  parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST) != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
 	hm_exit('403 - Truy cập bị từ chối');
 }
 

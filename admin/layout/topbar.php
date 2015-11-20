@@ -9,7 +9,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="topnavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#"><span class="glyphicon glyphicon-home"></span><?php echo _('Tổng quan'); ?></a></li>
+                <li><a href="?run=dashboard.php"><span class="glyphicon glyphicon-home"></span><?php echo _('Tổng quan'); ?></a></li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
                     class="glyphicon glyphicon-list-alt"></span><?php echo _('Cài đặt'); ?><b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -23,6 +23,7 @@
 						?>
                     </ul>
                 </li>
+				<li><a href="?run=media.php"><span class="glyphicon glyphicon-picture"></span><?php echo _('Thư viện'); ?></a></li>
             </ul>
 			
             <ul class="nav navbar-nav navbar-right">
@@ -30,15 +31,15 @@
                     class="glyphicon glyphicon-user"></span><?php echo user_name(); ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-						<a href="?run=user.php&action=edit">
-							<span class="glyphicon glyphicon-cog"></span><?php echo _('Tài khoản'); ?>
-						</a>
+							<a href="?run=user.php&action=edit">
+								<span class="glyphicon glyphicon-cog"></span><?php echo _('Tài khoản'); ?>
+							</a>
 						</li>
                         <li class="divider"></li>
                         <li>
-						<a href="?run=login.php&action=logout">
-							<span class="glyphicon glyphicon-off"></span><?php echo _('Đăng xuất'); ?>
-						</a>
+							<a href="?run=login.php&action=logout">
+								<span class="glyphicon glyphicon-off"></span><?php echo _('Đăng xuất'); ?>
+							</a>
 						</li>
                     </ul>
                 </li>

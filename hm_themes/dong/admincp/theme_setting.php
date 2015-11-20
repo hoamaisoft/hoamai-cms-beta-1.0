@@ -10,6 +10,10 @@
 					$args['name']='theme_dong_banner';	
 					$args['label']='Chọn banner';
 					$args['imageonly']=TRUE;
+					$banner = get_option( array('section'=>'theme_dong','key'=>'theme_dong_banner') );
+					if(is_numeric($banner)){
+						$args['default_value'] = $banner;
+					}
 					media_file_input($args);
 				?>
 			</div>
@@ -17,7 +21,7 @@
 			<div class="row admin_mainbar_box">
 				<p class="admin_sidebar_box_title"><?php echo _('Tác vụ'); ?></p>
 				<div class="form-group">
-					<button name="submit" type="submit" class="btn btn-primary"><?php echo _('Lưu lại'); ?></button>
+					<button name="save_theme_setting" type="submit" class="btn btn-primary"><?php echo _('Lưu lại'); ?></button>
 				</div>
 			</div>
 			

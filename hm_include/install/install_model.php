@@ -368,7 +368,7 @@ function install_db(){
 	}
 	/** tạo file config */
 
-	$hm_config = file_get_contents('hm_config_sample.php');
+	$hm_config = file_get_contents('hm_include/install/hm_config_sample.php');
 	$hm_config = str_replace("define('DB_NAME', '');","define('DB_NAME', '".$database."');",$hm_config);
 	$hm_config = str_replace("define('DB_USER', '');","define('DB_USER', '".$username."');",$hm_config);
 	$hm_config = str_replace("define('DB_PASSWORD', '');","define('DB_PASSWORD', '".$password."');",$hm_config);

@@ -43,7 +43,15 @@
 			</nav>
 			
 			<div class="banner">
-				<?php echo img("asset/images/banner.jpg"); ?>
+			
+				<?php 
+				$banner = get_option( array('section'=>'theme_dong','key'=>'theme_dong_banner') );
+				if(is_numeric($banner)){
+					echo img($banner);
+				}else{
+					echo img("asset/images/banner.jpg"); 
+				}
+				?>
 			</div>
 		
 		</div>

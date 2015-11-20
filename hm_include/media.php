@@ -132,12 +132,14 @@ function get_file_url($id,$include_file_name=TRUE){
 		
 		$file_info = json_decode($file_info,TRUE);
 		if($include_file_name){
-			$file_url = SITE_URL.'/'.HM_CONTENT_DIR.'/uploads'.$file_folder_part.$file_info['file_dst_name'];
+			$file_url = SITE_URL.FOLDER_PATH.HM_CONTENT_DIR.'/uploads'.$file_folder_part.$file_info['file_dst_name'];
 		}else{
-			$file_url = SITE_URL.'/'.HM_CONTENT_DIR.'/uploads'.$file_folder_part;
+			$file_url = SITE_URL.FOLDER_PATH.HM_CONTENT_DIR.'/uploads'.$file_folder_part;
 		}
 		return $file_url;
 		
+	}else{
+		return FALSE;
 	}
 	
 }

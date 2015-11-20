@@ -8,7 +8,7 @@ if ( ! defined('BASEPATH')) exit('403');
 /** gọi tệp tin admin base */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 
-if( $_SERVER['HTTP_HOST'] != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
+if(  parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST) != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
 	hm_exit('403 - Truy cập bị từ chối');
 }
 

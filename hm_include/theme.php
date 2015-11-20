@@ -57,12 +57,26 @@ function css($file=NULL){
 	$is_url = filter_var($file, FILTER_VALIDATE_URL);
 	if($is_url == FALSE){
 		
-		$theme = activated_theme();
-		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<link rel="stylesheet" type="text/css" href="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'">'."\n";
+		if(is_numeric($file)){
+			
+			$file_url = get_file_url($file);
+			if($file_url){
+				return '<link rel="stylesheet" type="text/css" href="'.$file_url.'">'."\n";
+			}else{
+				return FALSE;
+			}
+			
 		}else{
-			return FALSE;
+			
+			$theme = activated_theme();
+			if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
+				return '<link rel="stylesheet" type="text/css" href="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'">'."\n";
+			}else{
+				return FALSE;
+			}
+	
 		}
+		
 	}else{
 		
 		return '<link rel="stylesheet" type="text/css" href="'.$is_url.'">'."\n";
@@ -76,11 +90,24 @@ function js($file=NULL){
 	$is_url = filter_var($file, FILTER_VALIDATE_URL);
 	if($is_url == FALSE){
 		
-		$theme = activated_theme();
-		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<script type="text/javascript" src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'"></script>'."\n";
+		if(is_numeric($file)){
+			
+			$file_url = get_file_url($file);
+			if($file_url){
+				return '<script type="text/javascript" src="'.$file_url.'"></script>'."\n";
+			}else{
+				return FALSE;
+			}
+			
 		}else{
-			return FALSE;
+			
+			$theme = activated_theme();
+			if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
+				return '<script type="text/javascript" src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'"></script>'."\n";
+			}else{
+				return FALSE;
+			}
+			
 		}
 		
 	}else{
@@ -97,11 +124,24 @@ function img($file=NULL){
 	$is_url = filter_var($file, FILTER_VALIDATE_URL);
 	if($is_url == FALSE){
 		
-		$theme = activated_theme();
-		if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
-			return '<img src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'" />'."\n";
+		if(is_numeric($file)){
+			
+			$file_url = get_file_url($file);
+			if($file_url){
+				return '<img src="'.$file_url.'" />'."\n";
+			}else{
+				return FALSE;
+			}
+			
 		}else{
-			return FALSE;
+			
+			$theme = activated_theme();
+			if(file_exists('./'.HM_THEME_DIR.'/'.$theme.'/'.$file)){
+				return '<img src="'.SITE_URL.FOLDER_PATH.HM_THEME_DIR.'/'.$theme.'/'.$file.'" />'."\n";
+			}else{
+				return FALSE;
+			}
+			
 		}
 		
 	}else{

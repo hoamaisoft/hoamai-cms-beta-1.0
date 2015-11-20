@@ -575,9 +575,9 @@ function pagination($args=array()){
 	$perpage = $hmcontent->get_val('perpage');
 	$base = $hmcontent->get_val('base');
 	if($base!='/'){
-		$base = SITE_URL.'/'.$base.'/';
+		$base = SITE_URL.FOLDER_PATH.$base.'/';
 	}else{
-		$base = SITE_URL.$base;
+		$base = SITE_URL.FOLDER_PATH;
 	}
 	$query_str = $_SERVER['QUERY_STRING'];
 	$total = $hmcontent->get_val('total_result');
