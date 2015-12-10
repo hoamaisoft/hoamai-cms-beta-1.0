@@ -498,4 +498,14 @@ function up_date_request_uri_object($uri=NULL,$object_id=NULL,$object_type=NULL,
 	
 }
 
+function generateRandomString($length = 30) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 ?>

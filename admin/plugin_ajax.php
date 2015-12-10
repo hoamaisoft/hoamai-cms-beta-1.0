@@ -12,10 +12,6 @@ require_once( dirname( __FILE__ ) . '/admin.php' );
 /** gọi model xử lý plugin */
 require_once( dirname( __FILE__ ) . '/plugin/plugin_model.php' );
 
-if(  parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST) != parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) ){
-	hm_exit('403 - Truy cập bị từ chối');
-}
-
 $key=hm_get('key');
 $id=hm_get('id');
 $action=hm_get('action');

@@ -38,11 +38,11 @@
 					<div id="login-access" class="tab-pane fade active in">
 						<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal ajaxFormAdminCpLogin" action="<?php echo SITE_URL.FOLDER_PATH.HM_ADMINCP_DIR; ?>/?run=login_ajax.php&action=log-me-in">
 							<div class="form-group ">
-								<label for="login" class="sr-only">Tài khoản</label>
+								<label for="login" class="visible-xs">Tài khoản</label>
 								<input type="text" class="form-control" name="login" id="login_value" placeholder="Tài khoản" tabindex="1" value="" />
 							</div>
 							<div class="form-group ">
-								<label for="password" class="sr-only">Mật khẩu</label>
+								<label for="password" class="visible-xs">Mật khẩu</label>
 								<input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu" value="" tabindex="2" />
 							</div>
 							<div class="form-group ">

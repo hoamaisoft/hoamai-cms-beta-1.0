@@ -178,6 +178,12 @@ function build_input_form($field_array){
 				
 			break;
 			
+			case 'email':
+				
+				input_email($field_array);
+				
+			break;
+			
 			case 'hidden':
 				
 				input_hidden($field_array);
@@ -266,6 +272,29 @@ function input_text($field_array=array()){
 		build_input_slug($field_array['name'],$field_array['nice_name'],$field_array['object_id'],$field_array['object_type']);
 		
 	}
+	
+	echo '</div>'."\n";
+	
+}
+
+
+function input_email($field_array=array()){
+	
+	hook_action('input_email');
+	
+	$addClass=' '.$field_array['addClass'];
+	
+	echo '<div class="form-group">'."\n";
+	if($field_array['handle']){
+	echo '	<div class="form-group-handle"></div>';
+	}
+	if($field_array['nice_name']!=''){
+		echo '	<label for="'.$field_array['name'].'">'.$field_array['nice_name'].'</label>'."\n";
+	}
+	if($field_array['description']!=''){
+		echo '	<p class="input_description">'.$field_array['description'].'</p>'."\n";
+	}
+	echo '	<input '.$data_slug.' '.$field_array['required'].' name="'.$field_array['name'].'" type="email" class="form-control'.$addClass.'" id="'.$field_array['name'].'" placeholder="'.$field_array['placeholder'].'" value="'.str_replace('"','&quot;',$field_array['default_value']).'">'."\n";
 	
 	echo '</div>'."\n";
 	

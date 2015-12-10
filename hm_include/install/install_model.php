@@ -306,6 +306,7 @@ function install_db(){
 		  `user_pass` varchar(255) NOT NULL,
 		  `salt` int(6) NOT NULL,
 		  `user_nicename` varchar(255) NOT NULL,
+		  `user_email` varchar(255) NOT NULL,
 		  `user_activation_key` varchar(255) NOT NULL,
 		  `user_role` int(11) NOT NULL,
 		  `user_group` int(11) NOT NULL,

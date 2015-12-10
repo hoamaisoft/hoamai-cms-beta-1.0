@@ -5,5 +5,4 @@
  * Nó có thể là một blog, một trang giải trí hay 1 trang bán hàng là do cách bạn sử dụng.
  */
 require_once('hm_header.php');
-
 ?>

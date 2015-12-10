@@ -36,13 +36,18 @@
 				</ul>
 				<div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
 					<div id="login-access" class="tab-pane fade active in">
-						<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal ajaxFormAdminCpLostpw" action="<?php echo SITE_URL.FOLDER_PATH.HM_ADMINCP_DIR; ?>/?run=login_ajax.php&action=lostpw">
-							<div class="form-group ">
-								<label for="email" class="visible-xs">Email của bạn</label>
-								<input type="email" class="form-control" name="email" id="email_value" placeholder="Email của bạn" tabindex="1" value="" />
+						<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal ajaxFormAdminCpNewpw" action="<?php echo SITE_URL.FOLDER_PATH.HM_ADMINCP_DIR; ?>/?run=login_ajax.php&action=newpw">
+							<div class="form-group">
+								<label for="password" class="">Mật khẩu mới</label>
+								<input type="password" class="form-control" name="password" id="password_value" tabindex="1" value="" />
+							</div>
+							<div class="form-group">
+								<label for="password2" class="">Nhập lại mật khẩu mới</label>
+								<input type="password" class="form-control" name="password2" id="password2_value" tabindex="1" value="" />
+								<input type="hidden" name="key" value="<?php echo hm_get('key'); ?>">
 							</div>
 							<div class="form-group ">
-								<button type="submit" name="reset-password" id="submit" tabindex="5" class="btn btn-lg" value="<?php echo time(); ?>">Lấy lại mật khẩu</button>
+								<button type="submit" name="reset-password" id="submit" tabindex="5" class="btn btn-lg" value="<?php echo time(); ?>">Tạo mật khẩu mới</button>
 							</div>
 						</form>
 					</div>

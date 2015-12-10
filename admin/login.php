@@ -5,7 +5,6 @@
  */
 if ( ! defined('BASEPATH')) exit('403');
 
-
 /** gọi tệp tin admin base */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 
@@ -19,6 +18,10 @@ $action=hm_get('action');
 switch ($action) {
 	case 'lostpw':
 		require_once(BASEPATH . HM_ADMINCP_DIR . '/' . LAYOUT_DIR . '/' . 'lostpw.php');
+	break;
+	case 'newpw':
+		newpw_checkkey();
+		require_once(BASEPATH . HM_ADMINCP_DIR . '/' . LAYOUT_DIR . '/' . 'newpw.php');
 	break;
 	case 'logout':
 		admin_cp_logout();

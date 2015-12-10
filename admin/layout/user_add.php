@@ -57,6 +57,15 @@
 					build_input_form($args);
 					
 					$args=array(
+								'input_type'=>'email',
+								'name'=>'user_email',
+								'nice_name'=>_('Email'),
+								'description'=>_('Email sẽ dùng để lấy lại mật khẩu'),
+								'required'=>TRUE,
+								);
+					build_input_form($args);
+					
+					$args=array(
 								'input_type'=>'select',
 								'name'=>'userrole',
 								'nice_name'=>_('Quyền hạn'),
@@ -70,9 +79,6 @@
 													),
 								);
 					build_input_form($args);
-					
-					
-					
 					?>
 					
 					<div class="form-group">

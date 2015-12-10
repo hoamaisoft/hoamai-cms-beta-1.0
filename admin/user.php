@@ -29,7 +29,14 @@ switch ($action) {
 	case 'edit':
 		
 		/** Lấy thông tin user trả về array */
-		$args_use=user_data($id);
+		if(is_numeric($id)){
+			$args_use=user_data($id);
+		}else{
+			$session_admin_login = json_decode(hm_decode_str($_SESSION['admin_login']),TRUE);
+			$id = $session_admin_login['user_id'];
+			$args_use=user_data($id);
+		}
+		
 		
 		/** Hiển thị giao diện chỉnh sửa user */		
 		function admin_content_page(){

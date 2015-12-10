@@ -19,6 +19,7 @@ function ajax_add_user($args=array()){
 		$password = hm_post('password');
 		$password2 = hm_post('password2');
 		$nicename = hm_post('nicename');
+		$user_email = hm_post('user_email');
 		$userrole = hm_post('userrole');
 		$user_group = hm_post('user_group',0);
 		$salt = rand(100000,999999);
@@ -50,6 +51,7 @@ function ajax_add_user($args=array()){
 			
 		$values["user_login"] = MySQL::SQLValue($user_login);
 		$values["user_nicename"] = MySQL::SQLValue($nicename);
+		$values["user_email"] = MySQL::SQLValue($user_email);
 		$values["user_activation_key"] = MySQL::SQLValue($user_activation_key);
 		$values["user_role"] = MySQL::SQLValue($userrole);
 		$values["user_group"] = MySQL::SQLValue($user_group);
